@@ -26,7 +26,7 @@
     var watchID = null;
 
     // Wait for device API libraries to load
-    //document.addEventListener("deviceready", onDeviceReady, false);
+    document.addEventListener("deviceready", initializeMap, false);
 
     // device APIs are available
     //
@@ -69,6 +69,7 @@
 
     </script>        
     <script type="text/javascript">
+    function initializeMap() {
       var rotation = heading.magneticHeading;
       var view = new ol.View2D({
           center: ol.proj.transform([8.82 , 45], 'EPSG:4326', 'EPSG:3857'),
@@ -83,6 +84,7 @@
           ],
           view: view
       });
+      }
     </script>
 
   </body>
