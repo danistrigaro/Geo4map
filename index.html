@@ -11,8 +11,7 @@
     var watchID = null;
 
     // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
+    //document.addEventListener("deviceready", onDeviceReady, false);
 
     // device APIs are available
     //
@@ -78,6 +77,12 @@
           //rotation: rotation,
           zoom: 4
         })
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+ 
+          app.initialize();
       });
     </script>
   </body>
