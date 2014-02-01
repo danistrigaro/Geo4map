@@ -29,13 +29,9 @@
     <body>
         <div class="app">
             <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
             <div id="heading">Waiting for heading...</div>
-            <button onclick="startWatch();">Start Watching</button>
-            <button onclick="stopWatch();">Stop Watching</button>        
+            <button onclick=startWatch();>Start Watching</button>
+            <button onclick=stopWatch();>Stop Watching</button>        
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
@@ -43,16 +39,6 @@
 
     // The watch id references the current `watchHeading`
     var watchID = null;
-
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        startWatch();
-    }
 
     // Start watching the compass
     //
