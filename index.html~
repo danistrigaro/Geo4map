@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Geo4map</title>   
+    <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />    
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
@@ -69,19 +70,25 @@
     </div>
     <script type="text/javascript">
       var rotation = heading.magneticHeading;
-      var map = new ol.Map({
-        target: 'map',
-        layers: [
-          new ol.layer.Tile({
-            source: new ol.source.OSM()
-          })
-        ],
-        view: new ol.View2D({
-          center: ol.proj.transform([8.82 , 45], 'EPSG:4326', 'EPSG:3857'),
-          //rotation: rotation,
-          zoom: 4
-        })
-      });
+      var app =
+      {
+          initialize: function ()
+          {
+              var map = new ol.Map({
+                  target: 'map',
+                  layers: [
+                      new ol.layer.Tile({
+                      source: new ol.source.OSM()
+                      })
+                  ],
+                  view: new ol.View2D({
+                      center: ol.proj.transform([8.82 , 45], 'EPSG:4326', 'EPSG:3857'),
+                      //rotation: rotation,
+                      zoom: 4
+                  })
+              });
+         }
+      }
     </script>
 
   </body>
