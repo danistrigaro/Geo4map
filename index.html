@@ -5,7 +5,6 @@
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
- 
           app.initialize();
       });
     </script>    
@@ -72,7 +71,7 @@
         target: 'map',
         layers: [
           new ol.layer.Tile({
-            source: new ol.source.OSM({layer: 'sat'})
+            source: new ol.source.OSM()
           })
         ],
         view: new ol.View2D({
