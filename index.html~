@@ -70,23 +70,18 @@
     </div>
     <script type="text/javascript">
       var rotation = heading.magneticHeading;
-      function (map) {
-	
-
       var map = new ol.Map({
           target: 'map',
-          layers: [
-              new ol.layer.Tile({
+          layers: [ new ol.layer.Tile({
               source: new ol.source.OSM()
-          })
-        ],
-        view: new ol.View2D({
+              })
+          ],
+          view: new ol.View2D({
           center: ol.proj.transform([8.82 , 45], 'EPSG:4326', 'EPSG:3857'),
           //rotation: rotation,
           zoom: 4
         })
       });
-      }
     </script>
 
   </body>
