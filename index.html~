@@ -26,7 +26,6 @@
 
         // Update compass every 3 seconds
         var options = { frequency: 3000 };
-        rotation=Math.PI/6;
         watchID = navigator.compass.watchHeading(onSuccess, onError, options);
 
     }
